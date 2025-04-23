@@ -1,4 +1,11 @@
-id: PYSEC-0000-CVE-2025-21607
+id: PYSEC-2025-33
+modified: 2025-04-23T21:23:01.322686Z
+published: 2025-01-14T18:16:05Z
+aliases:
+- CVE-2025-21607
+related:
+- GHSA-vgf2-gvx8-xwc3
+- GHSA-vgf2-gvx8-xwc3
 details: Vyper is a Pythonic Smart Contract Language for the EVM. When the Vyper Compiler
   uses the precompiles EcRecover (0x1) and Identity (0x4), the success flag of the
   call is not checked. As a consequence an attacker can provide a specific amount
@@ -9,27 +16,15 @@ details: Vyper is a Pythonic Smart Contract Language for the EVM. When the Vyper
   calls. Therefore, we found no significantly impacted real-world contracts. None
   the less an advisory has been made out of an abundance of caution. There are no
   actions for users to take.
-aliases:
-- CVE-2025-21607
-modified: '2025-04-23T21:23:01.322686Z'
-published: '2025-01-14T18:16:05Z'
-related:
-- GHSA-vgf2-gvx8-xwc3
-- GHSA-vgf2-gvx8-xwc3
-references:
-- type: ADVISORY
-  url: https://github.com/vyperlang/vyper/security/advisories/GHSA-vgf2-gvx8-xwc3
-- type: EVIDENCE
-  url: https://github.com/vyperlang/vyper/security/advisories/GHSA-vgf2-gvx8-xwc3
 affected:
 - package:
-    name: vyper
     ecosystem: PyPI
+    name: vyper
     purl: pkg:pypi/vyper
   ranges:
   - type: ECOSYSTEM
     events:
-    - introduced: '0'
+    - introduced: "0"
     - fixed: 0.4.1
   versions:
   - 0.1.0b1
@@ -104,3 +99,8 @@ affected:
 severity:
 - type: CVSS_V3
   score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+references:
+- type: ADVISORY
+  url: https://github.com/vyperlang/vyper/security/advisories/GHSA-vgf2-gvx8-xwc3
+- type: EVIDENCE
+  url: https://github.com/vyperlang/vyper/security/advisories/GHSA-vgf2-gvx8-xwc3
