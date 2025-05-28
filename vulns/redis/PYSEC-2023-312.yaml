@@ -1,45 +1,34 @@
-id: PYSEC-0000-CVE-2021-31294
+id: PYSEC-2023-312
+modified: 2025-05-28T05:23:22.584406Z
+published: 2023-07-15T23:15:09Z
+aliases:
+- CVE-2021-31294
 details: 'Redis before 6cbea7d allows a replica to cause an assertion failure in a
   primary server by sending a non-administrative command (specifically, a SET command).
   NOTE: this was fixed for Redis 6.2.x and 7.x in 2021. Versions before 6.2 were not
   intended to have safety guarantees related to this.'
-aliases:
-- CVE-2021-31294
-modified: '2025-05-28T05:23:22.584406Z'
-published: '2023-07-15T23:15:09Z'
-references:
-- type: ADVISORY
-  url: https://security.netapp.com/advisory/ntap-20230814-0007/
-- type: EVIDENCE
-  url: https://github.com/redis/redis/issues/8712
-- type: FIX
-  url: https://github.com/redis/redis/commit/46f4ebbe842620f0976a36741a72482620aa4b48
-- type: FIX
-  url: https://github.com/redis/redis/commit/6cbea7d29b5285692843bc1c351abba1a7ef326f
-- type: REPORT
-  url: https://github.com/redis/redis/issues/8712
 affected:
 - package:
-    name: redis
     ecosystem: PyPI
+    name: redis
     purl: pkg:pypi/redis
   ranges:
   - type: GIT
-    repo: https://github.com/redis/redis
     events:
-    - introduced: '0'
+    - introduced: "0"
     - fixed: 46f4ebbe842620f0976a36741a72482620aa4b48
     - fixed: 6cbea7d29b5285692843bc1c351abba1a7ef326f
     - fixed: 46f4ebbe842620f0976a36741a72482620aa4b48
     - fixed: 6cbea7d29b5285692843bc1c351abba1a7ef326f
+    repo: https://github.com/redis/redis
   - type: ECOSYSTEM
     events:
-    - introduced: '0'
+    - introduced: "0"
     - fixed: 6.2.0
   versions:
   - 0.6.0
   - 0.6.1
-  - '1.34'
+  - "1.34"
   - 1.34.1
   - 2.0.0
   - 2.10.0
@@ -185,3 +174,14 @@ affected:
 severity:
 - type: CVSS_V3
   score: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H
+references:
+- type: ADVISORY
+  url: https://security.netapp.com/advisory/ntap-20230814-0007/
+- type: EVIDENCE
+  url: https://github.com/redis/redis/issues/8712
+- type: FIX
+  url: https://github.com/redis/redis/commit/46f4ebbe842620f0976a36741a72482620aa4b48
+- type: FIX
+  url: https://github.com/redis/redis/commit/6cbea7d29b5285692843bc1c351abba1a7ef326f
+- type: REPORT
+  url: https://github.com/redis/redis/issues/8712
