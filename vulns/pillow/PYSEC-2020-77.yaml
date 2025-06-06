@@ -8,7 +8,7 @@ affected:
     purl: pkg:pypi/pillow
   ranges:
   - type: GIT
-    repo: https://github.com/python-pillow/Pillow#diff-9478f2787e3ae9668a15123b165c23ac
+    repo: https://github.com/python-pillow/Pillow
     events:
     - introduced: '0'
     - fixed: 6a83e4324738bb0452fbe8074a995b1c73f08de7
