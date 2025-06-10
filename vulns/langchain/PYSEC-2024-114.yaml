@@ -11,6 +11,7 @@ aliases:
 - CVE-2024-7042
 modified: '2024-11-04T19:21:44.923698Z'
 published: '2024-10-29T13:15:00Z'
+withdrawn: '2025-06-07T18:43:00Z'
 references:
 - type: EVIDENCE
   url: https://huntr.com/bounties/b612defb-1104-4fff-9fef-001ab07c7b2d
