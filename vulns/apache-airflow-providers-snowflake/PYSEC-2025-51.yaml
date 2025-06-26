@@ -1,28 +1,24 @@
-id: PYSEC-0000-CVE-2025-50213
-details: "Failure to Sanitize Special Elements into a Different Plane (Special Element\
-  \ Injection) vulnerability in Apache Airflow Providers Snowflake.\n\nThis issue\
-  \ affects Apache Airflow Providers Snowflake: before 6.4.0.\n\nSanitation of table\
-  \ and stage parameters were added in\_CopyFromExternalStageToSnowflakeOperator\_\
-  to prevent\_SQL injection\nUsers are recommended to upgrade to version 6.4.0, which\
-  \ fixes the issue."
+id: PYSEC-2025-51
+modified: 2025-06-26T21:23:03.132527Z
+published: 2025-06-24T08:15:24Z
 aliases:
 - CVE-2025-50213
-modified: '2025-06-26T21:23:03.132527Z'
-published: '2025-06-24T08:15:24Z'
-references:
-- type: WEB
-  url: https://github.com/apache/airflow/pull/51734
-- type: WEB
-  url: https://lists.apache.org/thread/2kqfmyt2pghg5f6797g8hzvq331v8qx3
+details: |-
+  Failure to Sanitize Special Elements into a Different Plane (Special Element Injection) vulnerability in Apache Airflow Providers Snowflake.
+
+  This issue affects Apache Airflow Providers Snowflake: before 6.4.0.
+
+  Sanitation of table and stage parameters were added in CopyFromExternalStageToSnowflakeOperator to prevent SQL injection
+  Users are recommended to upgrade to version 6.4.0, which fixes the issue.
 affected:
 - package:
-    name: apache-airflow-providers-snowflake
     ecosystem: PyPI
+    name: apache-airflow-providers-snowflake
     purl: pkg:pypi/apache-airflow-providers-snowflake
   ranges:
   - type: ECOSYSTEM
     events:
-    - introduced: '0'
+    - introduced: "0"
     - fixed: 6.4.0
   versions:
   - 1.0.0
@@ -163,3 +159,8 @@ affected:
   - 6.3.1
   - 6.3.1rc1
   - 6.4.0rc1
+references:
+- type: WEB
+  url: https://github.com/apache/airflow/pull/51734
+- type: WEB
+  url: https://lists.apache.org/thread/2kqfmyt2pghg5f6797g8hzvq331v8qx3
