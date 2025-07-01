@@ -1,27 +1,38 @@
+id: PYSEC-2025-61
+modified: 2025-07-01T23:22:47.723277Z
+published: 2025-07-01T19:15:27Z
+aliases:
+- CVE-2025-48379
+- GHSA-xg8h-j46f-w952
+details: Pillow is a Python imaging library. In versions 11.2.0 to before 11.3.0,
+  there is a heap buffer overflow when writing a sufficiently large (>64k encoded
+  with default settings) image in the DDS format due to writing into a buffer without
+  checking for available space. This only affects users who save untrusted data as
+  a compressed DDS image. This issue has been patched in version 11.3.0.
 affected:
 - package:
     ecosystem: PyPI
     name: pillow
     purl: pkg:pypi/pillow
   ranges:
-  - events:
-    - introduced: '0'
+  - type: GIT
+    events:
+    - introduced: "0"
     - fixed: 89f1f4626a2aaf5f3d5ca6437f41def2998fbe09
     - fixed: ef98b3510e3e4f14b547762764813d7e5ca3c5a4
     repo: https://github.com/python-pillow/pillow
-    type: GIT
-  - events:
-    - introduced: '0'
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
     - fixed: 11.3.0
-    type: ECOSYSTEM
   versions:
-  - '1.0'
-  - '1.1'
-  - '1.2'
-  - '1.3'
-  - '1.4'
-  - '1.5'
-  - '1.6'
+  - "1.0"
+  - "1.1"
+  - "1.2"
+  - "1.3"
+  - "1.4"
+  - "1.5"
+  - "1.6"
   - 1.7.0
   - 1.7.1
   - 1.7.2
@@ -116,17 +127,6 @@ affected:
   - 9.3.0
   - 9.4.0
   - 9.5.0
-aliases:
-- CVE-2025-48379
-- GHSA-xg8h-j46f-w952
-details: Pillow is a Python imaging library. In versions 11.2.0 to before 11.3.0,
-  there is a heap buffer overflow when writing a sufficiently large (>64k encoded
-  with default settings) image in the DDS format due to writing into a buffer without
-  checking for available space. This only affects users who save untrusted data as
-  a compressed DDS image. This issue has been patched in version 11.3.0.
-id: PYSEC-0000-CVE-2025-48379
-modified: '2025-07-01T23:22:47.723277Z'
-published: '2025-07-01T19:15:27Z'
 references:
 - type: ADVISORY
   url: https://github.com/python-pillow/Pillow/security/advisories/GHSA-xg8h-j46f-w952
