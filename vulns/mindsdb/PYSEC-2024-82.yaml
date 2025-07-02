@@ -1,25 +1,12 @@
-id: PYSEC-2024-82
-details: Deserialization of untrusted data can occur in versions 23.3.2.0 and newer
-  of the MindsDB platform, enabling a maliciously uploaded model to run arbitrary
-  code on the server when interacted with.
-aliases:
-- CVE-2024-45852
-modified: '2025-06-24T19:04:14.529051Z'
-published: '2024-09-12T13:15:00Z'
-references:
-- type: EVIDENCE
-  url: https://hiddenlayer.com/sai-security-advisory/2024-09-mindsdb/
-- type: ADVISORY
-  url: https://hiddenlayer.com/sai-security-advisory/2024-09-mindsdb/
 affected:
 - package:
-    name: mindsdb
     ecosystem: PyPI
+    name: mindsdb
     purl: pkg:pypi/mindsdb
   ranges:
-  - type: ECOSYSTEM
-    events:
+  - events:
     - introduced: 23.3.2.0
+    type: ECOSYSTEM
   versions:
   - 23.10.2.0
   - 23.10.3.0
@@ -165,6 +152,20 @@ affected:
   - 25.6.3.0
   - 25.6.3.1
   - 25.6.4.0
+  - 25.7.1.0
+aliases:
+- CVE-2024-45852
+details: Deserialization of untrusted data can occur in versions 23.3.2.0 and newer
+  of the MindsDB platform, enabling a maliciously uploaded model to run arbitrary
+  code on the server when interacted with.
+id: PYSEC-2024-82
+modified: '2025-07-02T15:23:48.634403Z'
+published: '2024-09-12T13:15:00Z'
+references:
+- type: EVIDENCE
+  url: https://hiddenlayer.com/sai-security-advisory/2024-09-mindsdb/
+- type: ADVISORY
+  url: https://hiddenlayer.com/sai-security-advisory/2024-09-mindsdb/
 severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+- score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
