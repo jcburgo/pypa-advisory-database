@@ -1,13 +1,20 @@
+id: PYSEC-2025-69
+modified: 2025-07-13T21:23:01.161315Z
+published: 2025-07-13T20:15:25Z
+aliases:
+- CVE-2025-53865
+details: In Roundup before 2.5.0, XSS can occur via interaction between URLs and issue
+  tracker templates (devel and responsive).
 affected:
 - package:
     ecosystem: PyPI
     name: roundup
     purl: pkg:pypi/roundup
   ranges:
-  - events:
-    - introduced: '0'
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
     - fixed: 2.5.0
-    type: ECOSYSTEM
   versions:
   - 0.5.9
   - 0.6.11
@@ -34,7 +41,7 @@ affected:
   - 0.8.5
   - 0.8.6
   - 0.9.0b1
-  - '1.0'
+  - "1.0"
   - 1.0.1
   - 1.1.0
   - 1.1.1
@@ -84,13 +91,6 @@ affected:
   - 2.4.0b1
   - 2.4.0b2
   - 2.5.0b1
-aliases:
-- CVE-2025-53865
-details: In Roundup before 2.5.0, XSS can occur via interaction between URLs and issue
-  tracker templates (devel and responsive).
-id: PYSEC-0000-CVE-2025-53865
-modified: '2025-07-13T21:23:01.161315Z'
-published: '2025-07-13T20:15:25Z'
 references:
 - type: WEB
   url: https://www.roundup-tracker.org/docs/security.html
