@@ -1,20 +1,33 @@
+id: PYSEC-2024-258
+modified: 2025-07-15T17:37:50.05173Z
+published: 2024-05-20T08:15:08Z
+aliases:
+- CVE-2024-1968
+details: In scrapy/scrapy, an issue was identified where the Authorization header
+  is not removed during redirects that only change the scheme (e.g., HTTPS to HTTP)
+  but remain within the same domain. This behavior contravenes the Fetch standard,
+  which mandates the removal of Authorization headers in cross-origin requests when
+  the scheme, host, or port changes. Consequently, when a redirect downgrades from
+  HTTPS to HTTP, the Authorization header may be inadvertently exposed in plaintext,
+  leading to potential sensitive information disclosure to unauthorized actors. The
+  flaw is located in the _build_redirect_request function of the redirect middleware.
 affected:
 - package:
     ecosystem: PyPI
     name: scrapy
     purl: pkg:pypi/scrapy
   ranges:
-  - events:
-    - introduced: '0'
+  - type: GIT
+    events:
+    - introduced: "0"
     - fixed: 1d0502f25bbe55a22899af915623fda1aaeb9dd8
     repo: https://github.com/scrapy/scrapy
-    type: GIT
-  - events:
-    - introduced: '0'
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
     - fixed: 2.0.0
     - introduced: 2.0.0
     - fixed: 2.11.2
-    type: ECOSYSTEM
   versions:
   - 0.10.4.2364
   - 0.12.0.2550
@@ -46,9 +59,9 @@ affected:
   - 0.24.4
   - 0.24.5
   - 0.24.6
-  - '0.7'
-  - '0.8'
-  - '0.9'
+  - "0.7"
+  - "0.8"
+  - "0.9"
   - 1.0.0
   - 1.0.0rc1
   - 1.0.0rc2
@@ -114,19 +127,6 @@ affected:
   - 2.7.1
   - 2.8.0
   - 2.9.0
-aliases:
-- CVE-2024-1968
-details: In scrapy/scrapy, an issue was identified where the Authorization header
-  is not removed during redirects that only change the scheme (e.g., HTTPS to HTTP)
-  but remain within the same domain. This behavior contravenes the Fetch standard,
-  which mandates the removal of Authorization headers in cross-origin requests when
-  the scheme, host, or port changes. Consequently, when a redirect downgrades from
-  HTTPS to HTTP, the Authorization header may be inadvertently exposed in plaintext,
-  leading to potential sensitive information disclosure to unauthorized actors. The
-  flaw is located in the _build_redirect_request function of the redirect middleware.
-id: PYSEC-0000-CVE-2024-1968
-modified: '2025-07-15T17:37:50.051730Z'
-published: '2024-05-20T08:15:08Z'
 references:
 - type: EVIDENCE
   url: https://huntr.com/bounties/27f6a021-a891-446a-ada5-0226d619dd1a
