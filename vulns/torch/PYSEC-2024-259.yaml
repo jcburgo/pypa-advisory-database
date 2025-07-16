@@ -1,13 +1,21 @@
+id: PYSEC-2024-259
+modified: 2025-07-16T03:09:57.748865Z
+published: 2024-10-29T21:15:04Z
+aliases:
+- CVE-2024-48063
+details: 'In PyTorch <=2.4.1, the RemoteModule has Deserialization RCE. NOTE: this
+  is disputed by multiple parties because this is intended behavior in PyTorch distributed
+  computing.'
 affected:
 - package:
     ecosystem: PyPI
     name: torch
     purl: pkg:pypi/torch
   ranges:
-  - events:
-    - introduced: '0'
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
     - fixed: 2.5.0
-    type: ECOSYSTEM
   versions:
   - 1.0.0
   - 1.0.1
@@ -45,14 +53,9 @@ affected:
   - 2.3.1
   - 2.4.0
   - 2.4.1
-aliases:
-- CVE-2024-48063
-details: 'In PyTorch <=2.4.1, the RemoteModule has Deserialization RCE. NOTE: this
-  is disputed by multiple parties because this is intended behavior in PyTorch distributed
-  computing.'
-id: PYSEC-0000-CVE-2024-48063
-modified: '2025-07-16T03:09:57.748865Z'
-published: '2024-10-29T21:15:04Z'
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
 references:
 - type: EVIDENCE
   url: https://rumbling-slice-eb0.notion.site/Distributed-RPC-Framework-RemoteModule-has-Deserialization-RCE-in-pytorch-pytorch-111e3cda9e8c8021a7d3cbc61ee1a20c
@@ -62,6 +65,3 @@ references:
   url: https://gist.github.com/hexian2001/c046c066895a963ecc0a2cf9e1180065
 - type: WEB
   url: https://github.com/pytorch/pytorch/security/policy#using-distributed-features
-severity:
-- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-  type: CVSS_V3
