@@ -1,18 +1,30 @@
+id: PYSEC-2025-71
+modified: 2025-07-23T15:24:03.825615Z
+published: 2025-07-21T21:15:25Z
+aliases:
+- CVE-2025-53528
+- GHSA-2gxp-6r36-m97r
+details: Cadwyn creates production-ready community-driven modern Stripe-like API versioning
+  in FastAPI. In versions before 5.4.3, the version parameter of the "/docs" endpoint
+  is vulnerable to a Reflected XSS (Cross-Site Scripting) attack. This XSS would notably
+  allow an attacker to execute JavaScript code on a user's session for any application
+  based on Cadwyn via a one-click attack. The vulnerability has been fixed in version
+  5.4.3.
 affected:
 - package:
     ecosystem: PyPI
     name: cadwyn
     purl: pkg:pypi/cadwyn
   ranges:
-  - events:
-    - introduced: '0'
+  - type: GIT
+    events:
+    - introduced: "0"
     - fixed: b424ecd57cd8dabbc8fe39b8f8ccafea629c7728
     repo: https://github.com/zmievsa/cadwyn
-    type: GIT
-  - events:
-    - introduced: '0'
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
     - fixed: 5.4.3
-    type: ECOSYSTEM
   versions:
   - 0.1.0
   - 0.2.0
@@ -130,18 +142,6 @@ affected:
   - 5.3.3
   - 5.4.1
   - 5.4.2
-aliases:
-- CVE-2025-53528
-- GHSA-2gxp-6r36-m97r
-details: Cadwyn creates production-ready community-driven modern Stripe-like API versioning
-  in FastAPI. In versions before 5.4.3, the version parameter of the "/docs" endpoint
-  is vulnerable to a Reflected XSS (Cross-Site Scripting) attack. This XSS would notably
-  allow an attacker to execute JavaScript code on a user's session for any application
-  based on Cadwyn via a one-click attack. The vulnerability has been fixed in version
-  5.4.3.
-id: PYSEC-0000-CVE-2025-53528
-modified: '2025-07-23T15:24:03.825615Z'
-published: '2025-07-21T21:15:25Z'
 references:
 - type: ADVISORY
   url: https://github.com/zmievsa/cadwyn/security/advisories/GHSA-2gxp-6r36-m97r
