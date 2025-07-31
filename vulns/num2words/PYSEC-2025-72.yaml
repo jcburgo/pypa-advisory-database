@@ -1,6 +1,7 @@
-id: PYSEC-0000-num2words.yaml
+id: PYSEC-2025-72
 modified: 2025-07-31T14:34:47Z
-summary: After a successful phishing attack, new versions of `num2words` were published containing malware.
+summary: After a successful phishing attack, new versions of `num2words` were published
+  containing malware.
 details: |
   The `num2words` project was compromised via a phishing attack
   and two new versions were uploaded to PyPI containing malicious code.
@@ -12,8 +13,8 @@ affected:
     name: num2words
     purl: pkg:pypi/num2words
   versions:
-  - "0.5.15"
-  - "0.5.16"
+  - 0.5.15
+  - 0.5.16
 references:
 - type: EVIDENCE
   url: https://nitter.tiekoetter.com/SFLinux/status/1949906299308953827
