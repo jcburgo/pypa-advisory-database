@@ -1,26 +1,13 @@
-id: PYSEC-2020-220
-details: A flaw was found in Ansible Base when using the aws_ssm connection plugin
-  as garbage collector is not happening after playbook run is completed. Files would
-  remain in the bucket exposing the data. This issue affects directly data confidentiality.
-aliases:
-- CVE-2020-25635
-modified: '2025-10-10T00:18:00Z'
-published: '2020-10-05T14:15:00Z'
-references:
-- type: REPORT
-  url: https://github.com/ansible-collections/community.aws/issues/222
-- type: REPORT
-  url: https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-25635
 affected:
 - package:
-    name: ansible
     ecosystem: PyPI
+    name: ansible
     purl: pkg:pypi/ansible
   ranges:
-  - type: ECOSYSTEM
-    events:
+  - events:
     - introduced: '0'
-    - fixed: '2.10.1'
+    - fixed: 2.10.1
+    type: ECOSYSTEM
   versions:
   - '1.0'
   - '1.1'
@@ -264,3 +251,20 @@ affected:
   - 2.9.7
   - 2.9.8
   - 2.9.9
+  - 2.9.26
+  - 2.9.26rc1
+  - 2.9.27
+  - 2.9.27rc1
+aliases:
+- CVE-2020-25635
+details: A flaw was found in Ansible Base when using the aws_ssm connection plugin
+  as garbage collector is not happening after playbook run is completed. Files would
+  remain in the bucket exposing the data. This issue affects directly data confidentiality.
+id: PYSEC-2020-220
+modified: '2025-10-31T04:43:53.616247Z'
+published: '2020-10-05T14:15:00Z'
+references:
+- type: REPORT
+  url: https://github.com/ansible-collections/community.aws/issues/222
+- type: REPORT
+  url: https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-25635
