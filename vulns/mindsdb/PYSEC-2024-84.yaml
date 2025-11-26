@@ -127,6 +127,7 @@ affected:
   - 25.10.1
   - 25.11.0rc1
   - 25.11.0rc2
+  - 25.11.0
 aliases:
 - CVE-2024-45854
 details: "Deserialization of untrusted data can occur in versions 23.10.3.0 and newer\
@@ -134,7 +135,7 @@ details: "Deserialization of untrusted data can occur in versions 23.10.3.0 and 
   \ to run arbitrary code on the server when a \u2018describe\u2019 query is run on\
   \ it."
 id: PYSEC-2024-84
-modified: '2025-11-21T12:25:09.293532Z'
+modified: '2025-11-26T11:22:43.296118Z'
 published: '2024-09-12T13:15:00Z'
 references:
 - type: EVIDENCE
