@@ -157,11 +157,12 @@ affected:
   - 3.1.0rc0
   - 2.22.2
   - 2.22.3
+  - 2.22.4
 aliases:
 - CVE-2025-52967
 details: gateway_proxy_handler in MLflow before 3.1.0 lacks gateway_path validation.
 id: PYSEC-2025-52
-modified: '2025-12-05T10:49:50.730736Z'
+modified: '2025-12-05T13:25:55.146081Z'
 published: '2025-06-23T15:15:29Z'
 references:
 - type: REPORT
