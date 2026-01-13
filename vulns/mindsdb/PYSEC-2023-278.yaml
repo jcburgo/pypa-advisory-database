@@ -583,6 +583,7 @@ affected:
   - 25.13.0rc2
   - 25.13.0
   - 25.13.1
+  - 25.14.0rc1
 aliases:
 - CVE-2023-49796
 - GHSA-crhp-7c74-cg4c
@@ -591,7 +592,7 @@ details: MindsDB connects artificial intelligence models to real time data. Vers
   should use MindsDB's `staging` branch or v23.11.4.1, which contain a fix for the
   issue.
 id: PYSEC-2023-278
-modified: '2026-01-08T19:23:31.032367Z'
+modified: '2026-01-13T10:52:40.191114Z'
 published: '2023-12-11T21:15:00Z'
 references:
 - type: ADVISORY
