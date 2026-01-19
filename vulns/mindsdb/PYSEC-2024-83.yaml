@@ -137,13 +137,14 @@ affected:
   - 25.13.0
   - 25.13.1
   - 25.14.0rc1
+  - 25.14.0
 aliases:
 - CVE-2024-45853
 details: "Deserialization of untrusted data can occur in versions 23.10.2.0 and newer\
   \ of the MindsDB platform, enabling a maliciously uploaded \u2018inhouse\u2019 model\
   \ to run arbitrary code on the server when used for a prediction."
 id: PYSEC-2024-83
-modified: '2026-01-13T10:52:40.437300Z'
+modified: '2026-01-19T20:38:20.796938Z'
 published: '2024-09-12T13:15:00Z'
 references:
 - type: EVIDENCE
