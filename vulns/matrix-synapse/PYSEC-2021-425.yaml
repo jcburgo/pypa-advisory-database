@@ -19,7 +19,7 @@ affected:
     repo: https://github.com/matrix-org/synapse
     events:
     - introduced: "0"
-    - fixed: cb35df940a
+    - fixed: cb35df940a828bc40b96daed997b5ad4c7842fd3
   - type: ECOSYSTEM
     events:
     - introduced: "0"

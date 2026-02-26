@@ -21,7 +21,7 @@ affected:
     repo: https://github.com/matrix-org/synapse
     events:
     - introduced: "0"
-    - fixed: 91f2bd090
+    - fixed: 91f2bd0907f1d05af67166846988e49644eb650c
   - type: ECOSYSTEM
     events:
     - introduced: "0"
