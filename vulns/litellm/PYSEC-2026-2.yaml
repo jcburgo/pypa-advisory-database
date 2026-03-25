@@ -50,6 +50,8 @@ references:
   url: https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/
 - type: ARTICLE
   url: https://www.wiz.io/blog/teampcp-attack-kics-github-action
+- type: ARTICLE
+  url: https://docs.litellm.ai/blog/security-update-march-2026
 credits:
 - name: Callum McMahon, Futuresearch
   type: REPORTER
