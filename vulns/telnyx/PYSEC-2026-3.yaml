@@ -20,6 +20,8 @@ references:
 - type: ARTICLE
   url: https://www.aikido.dev/blog/telnyx-pypi-compromised-teampcp-canisterworm
 credits:
+- name: Caleb Brown (Google Open Source Security Team)
+  type: REPORTER
 - name: Mike Fiedler
   type: COORDINATOR
 - name: Kamil Mańkowski
