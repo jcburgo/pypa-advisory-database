@@ -22,6 +22,8 @@ references:
 credits:
 - name: Caleb Brown (Google Open Source Security Team)
   type: REPORTER
+- name: Henrik Plate (Endor Labs)
+  type: REPORTER
 - name: Mike Fiedler
   type: COORDINATOR
 - name: Kamil Mańkowski
